@@ -1,0 +1,7 @@
+<!--logs.wxml-->
+<!-- <view class="container log-list">
+  <block  wx:for-item="log">
+ 
+  </block>
+</view> -->
+block

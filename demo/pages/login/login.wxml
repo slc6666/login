@@ -1,0 +1,78 @@
+<!--login.wxml-->
+<view class="login-container" style="background-image: url('http://r.photo.store.qq.com/psb?/V11F6z4X1fmDw0/LWU*10s59cN9qtmR**dFIvzLbFdTbXddnBu6k482XiM!/r/dDcBAAAAAAAA')">
+  <view class='login' style="height:{{height}}">
+     <view class='login-main'>
+     <view class='login-nav' style="background-image: url('http://r.photo.store.qq.com/psb?/V11F6z4X1fmDw0/0so5JwjECxYI9xjvj4QQiUTv9sTfG.pC7iwXEkGuk5A!/r/dLYAAAAAAAAA')"></view>
+     <view class='login-form'>
+      <form bindsubmit="formSubmit">
+
+        <view class="login-username">
+
+            <label for="username">姓名：</label>
+
+            <input id="username" name="username" class="username" type="text" placeholder="请填写您的收货人姓名" />
+
+        </view>
+
+        <view class="login-usernumber">
+
+            <label for="usernumber">手机号：</label>
+
+            <input id="usernumber" name="usernumber" class="usernumber" type="number" placeholder="请填写您的手机号"  bindinput="handleInput" bindblur="validate"/>
+
+        </view>
+
+          <!-- <view class="login-userarea">
+
+            <label for="userarea">地区地址：</label>
+
+          <input id="userarea" name="userarea" class="userarea animation-button" type="text" placeholder="请选择您的地区" bindtap="translate" value='{{areavalue}}'disabled="disabled"/>
+        </view> -->
+
+        <view class="login-useradress">
+
+             <label for="useradress">详细地址:</label>
+
+            <input id="useradress" name="useradress" class="useradress" type="text" placeholder="请填写您的详细收货地址" />
+
+        </view>
+
+       
+
+        
+
+        <button class="btn_login"  formType="submit">立即领取</button>
+
+    </form>
+    </view>
+     </view>
+  </view>
+  <view class="animation-element-wrapper" animation="{{animation}}" style="visibility:{{show ? 'visible':'hidden'}}" bindtap="hiddenFloatView" data-id="444">
+     <view class="animation-element" catchtap="nono">
+        <text class="left-bt" catchtap="hiddenFloatView" data-id="555">取消</text>
+        <text class="right-bt" catchtap="hiddenFloatView" data-id="666">确定</text>
+          <view class="line"></view> 
+
+        <picker-view indicator-style = "height: 50rpx;" value="{{value}}" bindchange="bindChange" catchtap="nono">
+        <!--省-->
+        <picker-view-column>
+           <view wx:for="{{provinces}}" wx:for-item="sheng" wx:key="">
+             {{sheng.name}}
+          </view>
+        </picker-view-column>
+        <!--地级市-->
+        <picker-view-column>
+          <view wx:for="{{citys}}" wx:key="">
+            {{item.name}}
+          </view>
+        </picker-view-column>
+        <!--区县-->
+        <picker-view-column>
+          <view wx:for="{{countys}}" wx:key="">
+            {{item.name}}
+          </view>
+        </picker-view-column>
+        </picker-view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,4 @@
+<view class='succeed-container' style="background-image: url('http://r.photo.store.qq.com/psb?/V11F6z4X1fmDw0/FMwZT7TrvJ1J7gdxcUjAp7qc74qQsK03f4Q8Yt8fg0s!/r/dL8AAAAAAAAA')" hidden="{{show}}">
+
+<view class='succeed' style="height:{{height}}"></view>
+</view>
